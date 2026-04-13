@@ -4,7 +4,7 @@ import { GlassCard } from "@/components/GlassCard";
 import { StatCard } from "@/components/StatCard";
 import { DataTable } from "@/components/DataTable";
 import { Droplets, Beaker, FlaskConical, TestTubes } from "lucide-react";
-import ReactEChartsCore from "echarts-for-react/lib/core";
+import { ClientECharts } from "@/components/ClientECharts";
 import * as echarts from "echarts/core";
 import { LineChart, BarChart, GaugeChart } from "echarts/charts";
 import { GridComponent, TooltipComponent, LegendComponent } from "echarts/components";
@@ -100,19 +100,19 @@ function WaterQualityPage() {
       {/* Gauges + realtime */}
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 mb-6">
         <GlassCard title="pH值仪表">
-          <ReactEChartsCore echarts={echarts} option={phGauge} style={{ height: 260 }} />
+          <ClientECharts echarts={echarts} option={phGauge} style={{ height: 260 }} />
         </GlassCard>
         <GlassCard title="溶解氧仪表">
-          <ReactEChartsCore echarts={echarts} option={doGauge} style={{ height: 260 }} />
+          <ClientECharts echarts={echarts} option={doGauge} style={{ height: 260 }} />
         </GlassCard>
         <GlassCard title="24小时实时监测" className="lg:col-span-2">
-          <ReactEChartsCore echarts={echarts} option={realtimeLine} style={{ height: 260 }} />
+          <ClientECharts echarts={echarts} option={realtimeLine} style={{ height: 260 }} />
         </GlassCard>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-6">
         <GlassCard title="各站点污染物浓度">
-          <ReactEChartsCore echarts={echarts} option={stackedBar} style={{ height: 280 }} />
+          <ClientECharts echarts={echarts} option={stackedBar} style={{ height: 280 }} />
         </GlassCard>
         <GlassCard title="站点水质数据">
           <DataTable

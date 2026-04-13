@@ -142,20 +142,20 @@ function OverviewPage() {
       {/* Charts row 1 */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mb-6">
         <GlassCard title="水温/盐度/溶解氧趋势" className="lg:col-span-2">
-          <ReactEChartsCore echarts={echarts} option={lineOption} style={{ height: 320 }} />
+          <ClientECharts echarts={echarts} option={lineOption} style={{ height: 320 }} />
         </GlassCard>
         <GlassCard title="水质雷达分析">
-          <ReactEChartsCore echarts={echarts} option={radarOption} style={{ height: 320 }} />
+          <ClientECharts echarts={echarts} option={radarOption} style={{ height: 320 }} />
         </GlassCard>
       </div>
 
       {/* Charts row 2 */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-6">
         <GlassCard title="各站点环境质量指数">
-          <ReactEChartsCore echarts={echarts} option={barOption} style={{ height: 280 }} />
+          <ClientECharts echarts={echarts} option={barOption} style={{ height: 280 }} />
         </GlassCard>
         <GlassCard title="水质分类占比">
-          <ReactEChartsCore echarts={echarts} option={pieOption} style={{ height: 280 }} />
+          <ClientECharts echarts={echarts} option={pieOption} style={{ height: 280 }} />
         </GlassCard>
       </div>
 
