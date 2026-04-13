@@ -4,7 +4,7 @@ import { GlassCard } from "@/components/GlassCard";
 import { StatCard } from "@/components/StatCard";
 import { DataTable } from "@/components/DataTable";
 import { Fish, Bug, TreePine, Shell } from "lucide-react";
-import ReactEChartsCore from "echarts-for-react/lib/core";
+import { ClientECharts } from "@/components/ClientECharts";
 import * as echarts from "echarts/core";
 import { PieChart, BarChart, LineChart, RadarChart } from "echarts/charts";
 import { GridComponent, TooltipComponent, LegendComponent, RadarComponent } from "echarts/components";
@@ -95,15 +95,15 @@ function EcologyPage() {
       {/* Asymmetric 3-col layout */}
       <div className="grid grid-cols-1 md:grid-cols-5 gap-4 mb-6">
         <GlassCard title="物种分布" className="md:col-span-2">
-          <ReactEChartsCore echarts={echarts} option={speciesPie} style={{ height: 300 }} />
+          <ClientECharts echarts={echarts} option={speciesPie} style={{ height: 300 }} />
         </GlassCard>
         <GlassCard title="生态多样性对比" className="md:col-span-3">
-          <ReactEChartsCore echarts={echarts} option={biodiversityRadar} style={{ height: 300 }} />
+          <ClientECharts echarts={echarts} option={biodiversityRadar} style={{ height: 300 }} />
         </GlassCard>
       </div>
 
       <GlassCard title="生物种群年度变化趋势" className="mb-6">
-        <ReactEChartsCore echarts={echarts} option={populationTrend} style={{ height: 300 }} />
+        <ClientECharts echarts={echarts} option={populationTrend} style={{ height: 300 }} />
       </GlassCard>
 
       <GlassCard title="各海域生态指标">

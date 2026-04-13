@@ -3,7 +3,7 @@ import { OceanLayout } from "@/components/OceanLayout";
 import { GlassCard } from "@/components/GlassCard";
 import { StatCard } from "@/components/StatCard";
 import { Thermometer, Wind, CloudRain, Eye } from "lucide-react";
-import ReactEChartsCore from "echarts-for-react/lib/core";
+import { ClientECharts } from "@/components/ClientECharts";
 import * as echarts from "echarts/core";
 import { LineChart, BarChart, ScatterChart } from "echarts/charts";
 import { GridComponent, TooltipComponent, LegendComponent, VisualMapComponent } from "echarts/components";
@@ -97,15 +97,15 @@ function WeatherPage() {
 
       {/* Full width chart */}
       <GlassCard title="气温与风速对比" className="mb-6">
-        <ReactEChartsCore echarts={echarts} option={tempWindChart} style={{ height: 350 }} />
+        <ClientECharts echarts={echarts} option={tempWindChart} style={{ height: 350 }} />
       </GlassCard>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <GlassCard title="48小时气压变化">
-          <ReactEChartsCore echarts={echarts} option={pressureChart} style={{ height: 280 }} />
+          <ClientECharts echarts={echarts} option={pressureChart} style={{ height: 280 }} />
         </GlassCard>
         <GlassCard title="每日湿度">
-          <ReactEChartsCore echarts={echarts} option={humidityHeatmap} style={{ height: 280 }} />
+          <ClientECharts echarts={echarts} option={humidityHeatmap} style={{ height: 280 }} />
         </GlassCard>
       </div>
     </OceanLayout>

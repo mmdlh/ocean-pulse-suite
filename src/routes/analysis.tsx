@@ -3,7 +3,7 @@ import { OceanLayout } from "@/components/OceanLayout";
 import { GlassCard } from "@/components/GlassCard";
 import { StatCard } from "@/components/StatCard";
 import { Database, TrendingUp, Layers, Zap } from "lucide-react";
-import ReactEChartsCore from "echarts-for-react/lib/core";
+import { ClientECharts } from "@/components/ClientECharts";
 import * as echarts from "echarts/core";
 import { LineChart, BarChart, HeatmapChart, ScatterChart } from "echarts/charts";
 import { GridComponent, TooltipComponent, LegendComponent, VisualMapComponent } from "echarts/components";
@@ -92,19 +92,19 @@ function AnalysisPage() {
       {/* 2-col layout */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-6">
         <GlassCard title="水温-溶解氧相关性分析">
-          <ReactEChartsCore echarts={echarts} option={correlationScatter} style={{ height: 320 }} />
+          <ClientECharts echarts={echarts} option={correlationScatter} style={{ height: 320 }} />
         </GlassCard>
         <GlassCard title="数据密度热力图 (AQI)">
-          <ReactEChartsCore echarts={echarts} option={heatmapChart} style={{ height: 320 }} />
+          <ClientECharts echarts={echarts} option={heatmapChart} style={{ height: 320 }} />
         </GlassCard>
       </div>
 
       <GlassCard title="水温预测模型 (30天)" className="mb-6">
-        <ReactEChartsCore echarts={echarts} option={multiLine} style={{ height: 300 }} />
+        <ClientECharts echarts={echarts} option={multiLine} style={{ height: 300 }} />
       </GlassCard>
 
       <GlassCard title="月度数据采集与质量">
-        <ReactEChartsCore echarts={echarts} option={monthlyBar} style={{ height: 280 }} />
+        <ClientECharts echarts={echarts} option={monthlyBar} style={{ height: 280 }} />
       </GlassCard>
     </OceanLayout>
   );

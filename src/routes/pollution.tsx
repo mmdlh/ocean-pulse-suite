@@ -4,7 +4,7 @@ import { GlassCard } from "@/components/GlassCard";
 import { StatCard } from "@/components/StatCard";
 import { StatusIndicator } from "@/components/StatusIndicator";
 import { AlertTriangle, ShieldAlert, Siren, MapPin } from "lucide-react";
-import ReactEChartsCore from "echarts-for-react/lib/core";
+import { ClientECharts } from "@/components/ClientECharts";
 import * as echarts from "echarts/core";
 import { LineChart, BarChart, PieChart } from "echarts/charts";
 import { GridComponent, TooltipComponent, LegendComponent } from "echarts/components";
@@ -76,15 +76,15 @@ function PollutionPage() {
       </div>
 
       <GlassCard title="预警趋势" className="mb-6">
-        <ReactEChartsCore echarts={echarts} option={alertTrend} style={{ height: 320 }} />
+        <ClientECharts echarts={echarts} option={alertTrend} style={{ height: 320 }} />
       </GlassCard>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mb-6">
         <GlassCard title="污染类型分布">
-          <ReactEChartsCore echarts={echarts} option={pollutionTypePie} style={{ height: 280 }} />
+          <ClientECharts echarts={echarts} option={pollutionTypePie} style={{ height: 280 }} />
         </GlassCard>
         <GlassCard title="各海域预警数量">
-          <ReactEChartsCore echarts={echarts} option={regionBar} style={{ height: 280 }} />
+          <ClientECharts echarts={echarts} option={regionBar} style={{ height: 280 }} />
         </GlassCard>
         <GlassCard title="最新预警动态">
           <div className="space-y-1">

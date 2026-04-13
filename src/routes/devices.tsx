@@ -5,7 +5,7 @@ import { StatCard } from "@/components/StatCard";
 import { StatusIndicator } from "@/components/StatusIndicator";
 import { DataTable } from "@/components/DataTable";
 import { Cpu, Radio, Battery, Wifi } from "lucide-react";
-import ReactEChartsCore from "echarts-for-react/lib/core";
+import { ClientECharts } from "@/components/ClientECharts";
 import * as echarts from "echarts/core";
 import { PieChart, LineChart } from "echarts/charts";
 import { GridComponent, TooltipComponent, LegendComponent } from "echarts/components";
@@ -73,10 +73,10 @@ function DevicesPage() {
 
       <div className="grid grid-cols-1 lg:grid-cols-5 gap-4 mb-6">
         <GlassCard title="设备状态分布" className="lg:col-span-2">
-          <ReactEChartsCore echarts={echarts} option={statusPie} style={{ height: 280 }} />
+          <ClientECharts echarts={echarts} option={statusPie} style={{ height: 280 }} />
         </GlassCard>
         <GlassCard title="系统可用率趋势" className="lg:col-span-3">
-          <ReactEChartsCore echarts={echarts} option={uptimeChart} style={{ height: 280 }} />
+          <ClientECharts echarts={echarts} option={uptimeChart} style={{ height: 280 }} />
         </GlassCard>
       </div>
 
