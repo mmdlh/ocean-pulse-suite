@@ -28,19 +28,16 @@ function NavLink({ item, isActive }: { item: (typeof allItems)[number]; isActive
           : "text-muted-foreground hover:text-foreground"
       }`}
     >
-      {/* Active background glow */}
       {isActive && (
-        <span className="absolute inset-0 rounded-lg bg-primary/15 shadow-[0_0_16px_oklch(0.72_0.15_195/20%),inset_0_1px_0_oklch(0.78_0.15_195/20%)]" />
+        <span className="absolute inset-0 rounded-lg bg-primary/15 shadow-[0_0_16px_oklch(0.55_0.18_255/20%),inset_0_1px_0_oklch(0.55_0.18_255/20%)]" />
       )}
-      {/* Hover background */}
       {!isActive && (
         <span className="absolute inset-0 rounded-lg bg-secondary/0 group-hover:bg-secondary/30 transition-colors duration-300" />
       )}
-      <item.icon className={`relative w-4 h-4 transition-transform duration-300 ${isActive ? "drop-shadow-[0_0_6px_oklch(0.72_0.15_195/60%)]" : "group-hover:scale-110"}`} />
+      <item.icon className={`relative w-4 h-4 transition-transform duration-300 ${isActive ? "drop-shadow-[0_0_6px_oklch(0.55_0.18_255/60%)]" : "group-hover:scale-110"}`} />
       <span className="relative">{item.label}</span>
-      {/* Active bottom indicator */}
       {isActive && (
-        <span className="absolute -bottom-[9px] left-1/2 -translate-x-1/2 w-6 h-[2px] rounded-full bg-ocean-cyan shadow-[0_0_8px_oklch(0.72_0.15_195/80%)]" />
+        <span className="absolute -bottom-[9px] left-1/2 -translate-x-1/2 w-6 h-[2px] rounded-full bg-ocean-cyan shadow-[0_0_8px_oklch(0.55_0.18_255/80%)]" />
       )}
     </Link>
   );
@@ -63,7 +60,7 @@ export function Navbar() {
         {/* Center title */}
         <div className="flex items-center gap-3 shrink-0 px-4">
           <div className="relative">
-            <Waves className="w-8 h-8 text-ocean-cyan drop-shadow-[0_0_10px_oklch(0.72_0.15_195/50%)]" />
+            <Waves className="w-8 h-8 text-ocean-cyan drop-shadow-[0_0_10px_oklch(0.55_0.18_255/50%)]" />
             <span className="absolute -inset-1.5 rounded-full bg-ocean-cyan/10 blur-md" />
           </div>
           <h1 className="font-display text-xl font-bold tracking-[0.18em] glow-text text-ocean-light hidden sm:block">
@@ -90,10 +87,8 @@ export function Navbar() {
         </button>
       </div>
 
-      {/* Active indicator line at bottom */}
       <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-ocean-cyan/20 to-transparent" />
 
-      {/* Mobile menu */}
       {mobileOpen && (
         <div className="lg:hidden glass-nav border-t border-border/30 p-4 grid grid-cols-4 gap-2">
           {allItems.map((item) => {
