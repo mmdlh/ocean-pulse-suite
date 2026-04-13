@@ -1,10 +1,4 @@
-import { lazy, Suspense } from "react";
-
-const ReactEChartsCore = lazy(() =>
-  import("echarts-for-react/lib/core").then((mod) => ({
-    default: mod.default || mod,
-  }))
-);
+import { useState, useEffect } from "react";
 
 type ClientEChartsProps = {
   echarts: any;
@@ -13,12 +7,17 @@ type ClientEChartsProps = {
 };
 
 export function ClientECharts(props: ClientEChartsProps) {
-  if (typeof window === "undefined") {
+  const [Component, setComponent] = useState<React.ComponentType<any> | null>(null);
+
+  useEffect(() => {
+    import("echarts-for-react/lib/core").then((mod) => {
+      setComponent(() => mod.default || mod);
+    });
+  }, []);
+
+  if (!Component) {
     return <div style={props.style} />;
   }
-  return (
-    <Suspense fallback={<div style={props.style} />}>
-      <ReactEChartsCore {...props} />
-    </Suspense>
-  );
+
+  return <Component {...props} />;
 }
