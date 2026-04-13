@@ -54,28 +54,28 @@ export function Navbar() {
     <nav className="glass-nav fixed top-0 left-0 right-0 z-50 h-14">
       <div className="h-full max-w-[1800px] mx-auto px-4 flex items-center">
         {/* Left nav items */}
-        <div className="hidden lg:flex items-center gap-0.5 flex-1 justify-end pr-6">
+        <div className="hidden lg:flex items-center gap-1 flex-1 justify-end pr-10">
           {leftItems.map((item) => (
             <NavLink key={item.to} item={item} isActive={location.pathname === item.to} />
           ))}
         </div>
 
         {/* Center title */}
-        <div className="flex items-center gap-2.5 shrink-0">
+        <div className="flex items-center gap-3 shrink-0 px-4">
           <div className="relative">
-            <Waves className="w-7 h-7 text-ocean-cyan drop-shadow-[0_0_10px_oklch(0.72_0.15_195/50%)]" />
-            <span className="absolute -inset-1 rounded-full bg-ocean-cyan/10 blur-sm" />
+            <Waves className="w-8 h-8 text-ocean-cyan drop-shadow-[0_0_10px_oklch(0.72_0.15_195/50%)]" />
+            <span className="absolute -inset-1.5 rounded-full bg-ocean-cyan/10 blur-md" />
           </div>
-          <h1 className="font-display text-base font-bold tracking-[0.15em] glow-text text-ocean-light hidden sm:block">
+          <h1 className="font-display text-xl font-bold tracking-[0.18em] glow-text text-ocean-light hidden sm:block">
             海洋环境监测平台
           </h1>
-          <h1 className="font-display text-sm font-bold tracking-wider glow-text text-ocean-light sm:hidden">
+          <h1 className="font-display text-base font-bold tracking-wider glow-text text-ocean-light sm:hidden">
             海洋监测
           </h1>
         </div>
 
         {/* Right nav items */}
-        <div className="hidden lg:flex items-center gap-0.5 flex-1 justify-start pl-6">
+        <div className="hidden lg:flex items-center gap-1 flex-1 justify-start pl-10">
           {rightItems.map((item) => (
             <NavLink key={item.to} item={item} isActive={location.pathname === item.to} />
           ))}
