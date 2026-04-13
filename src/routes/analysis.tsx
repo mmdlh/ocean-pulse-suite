@@ -27,8 +27,8 @@ function AnalysisPage() {
       type: "scatter", symbolSize: 12,
       data: Array.from({ length: 60 }, () => [(10 + Math.random() * 22).toFixed(1), (12 - (Math.random() * 6)).toFixed(1)]),
       itemStyle: {
-        color: { type: "radial", x: 0.5, y: 0.5, r: 0.5, colorStops: [{ offset: 0, color: "rgba(34,211,238,0.8)" }, { offset: 1, color: "rgba(34,211,238,0.2)" }] },
-        shadowBlur: 10, shadowColor: "rgba(34,211,238,0.3)",
+        color: { type: "radial", x: 0.5, y: 0.5, r: 0.5, colorStops: [{ offset: 0, color: "rgba(79,107,246,0.8)" }, { offset: 1, color: "rgba(79,107,246,0.2)" }] },
+        shadowBlur: 10, shadowColor: "rgba(79,107,246,0.3)",
       },
     }],
   };
@@ -47,7 +47,7 @@ function AnalysisPage() {
     tooltip: { ...baseChartOption.tooltip, position: "top" },
     xAxis: { ...baseChartOption.xAxis, type: "category", data: heatmapHours, splitArea: { show: true, areaStyle: { color: ["rgba(0,0,0,0)"] } } },
     yAxis: { ...baseChartOption.yAxis, type: "category", data: heatmapDays, splitArea: { show: true } },
-    visualMap: { min: 0, max: 100, calculable: true, orient: "horizontal", left: "center", bottom: 0, inRange: { color: ["#0c4a6e", "#0891b2", "#22d3ee", "#67e8f9", "#fbbf24", "#ef4444"] }, textStyle: { color: "#94a3b8" } },
+    visualMap: { min: 0, max: 100, calculable: true, orient: "horizontal", left: "center", bottom: 0, inRange: { color: ["#0c4a6e", "#2d4fd4", "#4f6bf6", "#7c9dff", "#fbbf24", "#ef4444"] }, textStyle: { color: "#94a3b8" } },
     series: [{ type: "heatmap", data: heatmapData, label: { show: false }, emphasis: { itemStyle: { shadowBlur: 10, shadowColor: "rgba(0,0,0,0.5)" } } }],
   };
 
@@ -58,7 +58,7 @@ function AnalysisPage() {
     xAxis: { ...baseChartOption.xAxis, type: "category", data: Array.from({ length: 30 }, (_, i) => `${i + 1}日`) },
     yAxis: { ...baseChartOption.yAxis, type: "value" },
     series: [
-      { name: "实际值", type: "line", data: Array.from({ length: 20 }, () => (20 + Math.random() * 8).toFixed(1)), lineStyle: { color: "#22d3ee", width: 2 }, itemStyle: { color: "#22d3ee" }, symbol: "none" },
+      { name: "实际值", type: "line", data: Array.from({ length: 20 }, () => (20 + Math.random() * 8).toFixed(1)), lineStyle: { color: "#4f6bf6", width: 2 }, itemStyle: { color: "#4f6bf6" }, symbol: "none" },
       { name: "预测值", type: "line", data: Array.from({ length: 30 }, () => (20 + Math.random() * 8).toFixed(1)), lineStyle: { color: "#a78bfa", width: 2, type: "dashed" }, itemStyle: { color: "#a78bfa" }, symbol: "none" },
       { name: "置信区间上限", type: "line", data: Array.from({ length: 30 }, () => (26 + Math.random() * 5).toFixed(1)), lineStyle: { opacity: 0 }, itemStyle: { opacity: 0 }, stack: "ci", symbol: "none" },
       { name: "置信区间下限", type: "line", data: Array.from({ length: 30 }, () => (16 + Math.random() * 3).toFixed(1)), lineStyle: { opacity: 0 }, itemStyle: { opacity: 0 }, stack: "ci", areaStyle: { color: "rgba(167,139,250,0.08)" }, symbol: "none" },
@@ -75,7 +75,7 @@ function AnalysisPage() {
       { ...baseChartOption.yAxis, type: "value", name: "%", position: "right", min: 90, max: 100, splitLine: { show: false } },
     ],
     series: [
-      { name: "数据采集量", type: "bar", data: [185, 210, 198, 230, 245, 260], yAxisIndex: 0, itemStyle: { color: { type: "linear", x: 0, y: 0, x2: 0, y2: 1, colorStops: [{ offset: 0, color: "#22d3ee" }, { offset: 1, color: "#0891b2" }] }, borderRadius: [6, 6, 0, 0] }, barWidth: "45%" },
+      { name: "数据采集量", type: "bar", data: [185, 210, 198, 230, 245, 260], yAxisIndex: 0, itemStyle: { color: { type: "linear", x: 0, y: 0, x2: 0, y2: 1, colorStops: [{ offset: 0, color: "#4f6bf6" }, { offset: 1, color: "#2d4fd4" }] }, borderRadius: [6, 6, 0, 0] }, barWidth: "45%" },
       { name: "有效数据率", type: "line", data: [96.2, 97.1, 95.8, 98.0, 97.5, 98.8], yAxisIndex: 1, lineStyle: { color: "#f472b6", width: 3 }, itemStyle: { color: "#f472b6" }, symbol: "circle", symbolSize: 8 },
     ],
   };

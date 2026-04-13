@@ -1,6 +1,6 @@
 export const oceanChartColors = [
-  "#22d3ee", "#06b6d4", "#14b8a6", "#0ea5e9", "#38bdf8",
-  "#67e8f9", "#2dd4bf", "#a78bfa", "#f472b6", "#fbbf24",
+  "#4f6bf6", "#3b5ce5", "#5b7ff9", "#2d4fd4", "#6b8afc",
+  "#7c9dff", "#3a5bc7", "#a78bfa", "#f472b6", "#fbbf24",
 ];
 
 export const baseChartOption = {
@@ -10,7 +10,7 @@ export const baseChartOption = {
   grid: { left: "3%", right: "4%", bottom: "12%", containLabel: true },
   tooltip: {
     backgroundColor: "rgba(15, 23, 42, 0.9)",
-    borderColor: "rgba(34, 211, 238, 0.3)",
+    borderColor: "rgba(79, 107, 246, 0.3)",
     textStyle: { color: "#e2e8f0" },
   },
   xAxis: {

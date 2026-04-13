@@ -29,7 +29,7 @@ function DevicesPage() {
       label: { show: false },
       emphasis: { label: { show: true, fontSize: 14, fontWeight: "bold", color: "#e2e8f0" } },
       data: [
-        { value: 98, name: "在线", itemStyle: { color: { type: "linear", x: 0, y: 0, x2: 1, y2: 1, colorStops: [{ offset: 0, color: "#22d3ee" }, { offset: 1, color: "#06b6d4" }] } } },
+        { value: 98, name: "在线", itemStyle: { color: { type: "linear", x: 0, y: 0, x2: 1, y2: 1, colorStops: [{ offset: 0, color: "#4f6bf6" }, { offset: 1, color: "#3b5ce5" }] } } },
         { value: 15, name: "离线", itemStyle: { color: { type: "linear", x: 0, y: 0, x2: 1, y2: 1, colorStops: [{ offset: 0, color: "#ef4444" }, { offset: 1, color: "#dc2626" }] } } },
         { value: 8, name: "维护中", itemStyle: { color: { type: "linear", x: 0, y: 0, x2: 1, y2: 1, colorStops: [{ offset: 0, color: "#fbbf24" }, { offset: 1, color: "#f59e0b" }] } } },
         { value: 7, name: "告警", itemStyle: { color: { type: "linear", x: 0, y: 0, x2: 1, y2: 1, colorStops: [{ offset: 0, color: "#a78bfa" }, { offset: 1, color: "#8b5cf6" }] } } },
@@ -46,9 +46,9 @@ function DevicesPage() {
     series: [{
       type: "line", smooth: true, symbol: "circle", symbolSize: 8,
       data: [97.2, 98.1, 96.5, 99.0, 98.8, 99.2],
-      lineStyle: { color: "#22d3ee", width: 3, shadowColor: "rgba(34,211,238,0.4)", shadowBlur: 10 },
-      itemStyle: { color: "#22d3ee", borderColor: "#0e7490", borderWidth: 2 },
-      areaStyle: { color: { type: "linear", x: 0, y: 0, x2: 0, y2: 1, colorStops: [{ offset: 0, color: "rgba(34,211,238,0.3)" }, { offset: 1, color: "rgba(34,211,238,0)" }] } },
+      lineStyle: { color: "#4f6bf6", width: 3, shadowColor: "rgba(79,107,246,0.4)", shadowBlur: 10 },
+      itemStyle: { color: "#4f6bf6", borderColor: "#2244b8", borderWidth: 2 },
+      areaStyle: { color: { type: "linear", x: 0, y: 0, x2: 0, y2: 1, colorStops: [{ offset: 0, color: "rgba(79,107,246,0.3)" }, { offset: 1, color: "rgba(79,107,246,0)" }] } },
     }],
   };
 

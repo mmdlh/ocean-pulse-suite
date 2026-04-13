@@ -35,9 +35,9 @@ function OverviewPage() {
     series: [
       {
         name: "水温", type: "line", smooth: true, data: [12, 13, 15, 18, 22, 26, 28, 27, 24, 20, 16, 13],
-        lineStyle: { color: "#22d3ee", width: 3 },
-        itemStyle: { color: "#22d3ee" },
-        areaStyle: { color: { type: "linear", x: 0, y: 0, x2: 0, y2: 1, colorStops: [{ offset: 0, color: "rgba(34,211,238,0.3)" }, { offset: 1, color: "rgba(34,211,238,0)" }] } },
+        lineStyle: { color: "#4f6bf6", width: 3 },
+        itemStyle: { color: "#4f6bf6" },
+        areaStyle: { color: { type: "linear", x: 0, y: 0, x2: 0, y2: 1, colorStops: [{ offset: 0, color: "rgba(79,107,246,0.3)" }, { offset: 1, color: "rgba(79,107,246,0)" }] } },
       },
       {
         name: "盐度", type: "line", smooth: true, data: [33, 33.2, 33.5, 33.8, 34, 34.2, 34.5, 34.3, 34, 33.8, 33.5, 33.2],
@@ -47,9 +47,9 @@ function OverviewPage() {
       },
       {
         name: "溶解氧", type: "line", smooth: true, data: [9.2, 9, 8.5, 8, 7.5, 7, 6.8, 7, 7.5, 8, 8.5, 9],
-        lineStyle: { color: "#2dd4bf", width: 3 },
-        itemStyle: { color: "#2dd4bf" },
-        areaStyle: { color: { type: "linear", x: 0, y: 0, x2: 0, y2: 1, colorStops: [{ offset: 0, color: "rgba(45,212,191,0.2)" }, { offset: 1, color: "rgba(45,212,191,0)" }] } },
+        lineStyle: { color: "#6b8afc", width: 3 },
+        itemStyle: { color: "#6b8afc" },
+        areaStyle: { color: { type: "linear", x: 0, y: 0, x2: 0, y2: 1, colorStops: [{ offset: 0, color: "rgba(107,138,252,0.2)" }, { offset: 1, color: "rgba(107,138,252,0)" }] } },
       },
     ],
   };
@@ -62,11 +62,11 @@ function OverviewPage() {
     series: [{
       type: "bar", barWidth: "50%",
       data: [
-        { value: 65, itemStyle: { color: { type: "linear", x: 0, y: 0, x2: 0, y2: 1, colorStops: [{ offset: 0, color: "#22d3ee" }, { offset: 1, color: "#0891b2" }] }, borderRadius: [6, 6, 0, 0] } },
+        { value: 65, itemStyle: { color: { type: "linear", x: 0, y: 0, x2: 0, y2: 1, colorStops: [{ offset: 0, color: "#4f6bf6" }, { offset: 1, color: "#2d4fd4" }] }, borderRadius: [6, 6, 0, 0] } },
         { value: 82, itemStyle: { color: { type: "linear", x: 0, y: 0, x2: 0, y2: 1, colorStops: [{ offset: 0, color: "#a78bfa" }, { offset: 1, color: "#7c3aed" }] }, borderRadius: [6, 6, 0, 0] } },
-        { value: 45, itemStyle: { color: { type: "linear", x: 0, y: 0, x2: 0, y2: 1, colorStops: [{ offset: 0, color: "#2dd4bf" }, { offset: 1, color: "#0d9488" }] }, borderRadius: [6, 6, 0, 0] } },
+        { value: 45, itemStyle: { color: { type: "linear", x: 0, y: 0, x2: 0, y2: 1, colorStops: [{ offset: 0, color: "#6b8afc" }, { offset: 1, color: "#3a5bc7" }] }, borderRadius: [6, 6, 0, 0] } },
         { value: 93, itemStyle: { color: { type: "linear", x: 0, y: 0, x2: 0, y2: 1, colorStops: [{ offset: 0, color: "#f472b6" }, { offset: 1, color: "#db2777" }] }, borderRadius: [6, 6, 0, 0] } },
-        { value: 58, itemStyle: { color: { type: "linear", x: 0, y: 0, x2: 0, y2: 1, colorStops: [{ offset: 0, color: "#38bdf8" }, { offset: 1, color: "#0284c7" }] }, borderRadius: [6, 6, 0, 0] } },
+        { value: 58, itemStyle: { color: { type: "linear", x: 0, y: 0, x2: 0, y2: 1, colorStops: [{ offset: 0, color: "#5b7ff9" }, { offset: 1, color: "#2d4fd4" }] }, borderRadius: [6, 6, 0, 0] } },
         { value: 71, itemStyle: { color: { type: "linear", x: 0, y: 0, x2: 0, y2: 1, colorStops: [{ offset: 0, color: "#fbbf24" }, { offset: 1, color: "#d97706" }] }, borderRadius: [6, 6, 0, 0] } },
       ],
     }],
@@ -83,7 +83,7 @@ function OverviewPage() {
       splitNumber: 4,
       axisName: { color: "#94a3b8" },
       splitLine: { lineStyle: { color: "rgba(100,116,139,0.2)" } },
-      splitArea: { areaStyle: { color: ["rgba(34,211,238,0.02)", "rgba(34,211,238,0.05)"] } },
+      splitArea: { areaStyle: { color: ["rgba(79,107,246,0.02)", "rgba(79,107,246,0.05)"] } },
       axisLine: { lineStyle: { color: "rgba(100,116,139,0.2)" } },
     },
     series: [{
@@ -92,9 +92,9 @@ function OverviewPage() {
         {
           value: [7.8, 8.5, 0.5, 25, 0.3, 6],
           name: "当前值",
-          lineStyle: { color: "#22d3ee", width: 2 },
-          itemStyle: { color: "#22d3ee" },
-          areaStyle: { color: "rgba(34,211,238,0.15)" },
+          lineStyle: { color: "#4f6bf6", width: 2 },
+          itemStyle: { color: "#4f6bf6" },
+          areaStyle: { color: "rgba(79,107,246,0.15)" },
         },
         {
           value: [7.2, 6, 1.5, 50, 0.8, 4],
@@ -118,8 +118,8 @@ function OverviewPage() {
       label: { show: false },
       emphasis: { label: { show: true, fontSize: 14, fontWeight: "bold", color: "#e2e8f0" } },
       data: [
-        { value: 35, name: "I类水质", itemStyle: { color: { type: "linear", x: 0, y: 0, x2: 1, y2: 1, colorStops: [{ offset: 0, color: "#22d3ee" }, { offset: 1, color: "#06b6d4" }] } } },
-        { value: 28, name: "II类水质", itemStyle: { color: { type: "linear", x: 0, y: 0, x2: 1, y2: 1, colorStops: [{ offset: 0, color: "#2dd4bf" }, { offset: 1, color: "#14b8a6" }] } } },
+        { value: 35, name: "I类水质", itemStyle: { color: { type: "linear", x: 0, y: 0, x2: 1, y2: 1, colorStops: [{ offset: 0, color: "#4f6bf6" }, { offset: 1, color: "#3b5ce5" }] } } },
+        { value: 28, name: "II类水质", itemStyle: { color: { type: "linear", x: 0, y: 0, x2: 1, y2: 1, colorStops: [{ offset: 0, color: "#6b8afc" }, { offset: 1, color: "#4a6ae0" }] } } },
         { value: 20, name: "III类水质", itemStyle: { color: { type: "linear", x: 0, y: 0, x2: 1, y2: 1, colorStops: [{ offset: 0, color: "#a78bfa" }, { offset: 1, color: "#8b5cf6" }] } } },
         { value: 12, name: "IV类水质", itemStyle: { color: { type: "linear", x: 0, y: 0, x2: 1, y2: 1, colorStops: [{ offset: 0, color: "#fbbf24" }, { offset: 1, color: "#f59e0b" }] } } },
         { value: 5, name: "V类水质", itemStyle: { color: { type: "linear", x: 0, y: 0, x2: 1, y2: 1, colorStops: [{ offset: 0, color: "#f472b6" }, { offset: 1, color: "#ec4899" }] } } },

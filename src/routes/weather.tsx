@@ -41,7 +41,7 @@ function WeatherPage() {
         name: "风速", type: "bar", yAxisIndex: 1,
         data: [12, 18, 8, 22, 15, 10, 14],
         itemStyle: {
-          color: { type: "linear", x: 0, y: 0, x2: 0, y2: 1, colorStops: [{ offset: 0, color: "#38bdf8" }, { offset: 1, color: "#0284c7" }] },
+          color: { type: "linear", x: 0, y: 0, x2: 0, y2: 1, colorStops: [{ offset: 0, color: "#5b7ff9" }, { offset: 1, color: "#2d4fd4" }] },
           borderRadius: [4, 4, 0, 0],
         },
         barWidth: "40%",
@@ -74,8 +74,8 @@ function WeatherPage() {
         itemStyle: {
           color: (params: { dataIndex: number }) => {
             const colors = [
-              { type: "linear", x: 0, y: 0, x2: 0, y2: 1, colorStops: [{ offset: 0, color: "#67e8f9" }, { offset: 1, color: "#22d3ee" }] },
-              { type: "linear", x: 0, y: 0, x2: 0, y2: 1, colorStops: [{ offset: 0, color: "#5eead4" }, { offset: 1, color: "#14b8a6" }] },
+              { type: "linear", x: 0, y: 0, x2: 0, y2: 1, colorStops: [{ offset: 0, color: "#7c9dff" }, { offset: 1, color: "#4f6bf6" }] },
+              { type: "linear", x: 0, y: 0, x2: 0, y2: 1, colorStops: [{ offset: 0, color: "#7c9dff" }, { offset: 1, color: "#4a6ae0" }] },
             ];
             return colors[params.dataIndex % 2] as unknown as string;
           },

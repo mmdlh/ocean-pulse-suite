@@ -27,12 +27,12 @@ function EcologyPage() {
       itemStyle: { borderRadius: 6, borderColor: "rgba(15,23,42,0.8)", borderWidth: 2 },
       label: { color: "#94a3b8", fontSize: 11 },
       data: [
-        { value: 42, name: "鱼类", itemStyle: { color: "#22d3ee" } },
+        { value: 42, name: "鱼类", itemStyle: { color: "#4f6bf6" } },
         { value: 28, name: "甲壳类", itemStyle: { color: "#a78bfa" } },
-        { value: 18, name: "软体动物", itemStyle: { color: "#2dd4bf" } },
+        { value: 18, name: "软体动物", itemStyle: { color: "#6b8afc" } },
         { value: 12, name: "海藻", itemStyle: { color: "#fbbf24" } },
         { value: 8, name: "珊瑚", itemStyle: { color: "#f472b6" } },
-        { value: 5, name: "海洋哺乳", itemStyle: { color: "#38bdf8" } },
+        { value: 5, name: "海洋哺乳", itemStyle: { color: "#5b7ff9" } },
       ],
     }],
   };
@@ -47,16 +47,16 @@ function EcologyPage() {
       shape: "polygon", splitNumber: 4,
       axisName: { color: "#94a3b8", fontSize: 11 },
       splitLine: { lineStyle: { color: "rgba(100,116,139,0.2)" } },
-      splitArea: { areaStyle: { color: ["rgba(34,211,238,0.02)", "rgba(34,211,238,0.05)"] } },
+      splitArea: { areaStyle: { color: ["rgba(79,107,246,0.02)", "rgba(79,107,246,0.05)"] } },
       axisLine: { lineStyle: { color: "rgba(100,116,139,0.2)" } },
     },
     legend: { ...baseChartOption.legend, data: ["南海", "东海", "黄海"], bottom: 0 },
     series: [{
       type: "radar",
       data: [
-        { value: [85, 0.8, 3.8, 0.3, 420], name: "南海", lineStyle: { color: "#22d3ee" }, itemStyle: { color: "#22d3ee" }, areaStyle: { color: "rgba(34,211,238,0.12)" } },
+        { value: [85, 0.8, 3.8, 0.3, 420], name: "南海", lineStyle: { color: "#4f6bf6" }, itemStyle: { color: "#4f6bf6" }, areaStyle: { color: "rgba(79,107,246,0.12)" } },
         { value: [62, 0.6, 2.9, 0.5, 280], name: "东海", lineStyle: { color: "#a78bfa" }, itemStyle: { color: "#a78bfa" }, areaStyle: { color: "rgba(167,139,250,0.1)" } },
-        { value: [45, 0.5, 2.1, 0.6, 180], name: "黄海", lineStyle: { color: "#2dd4bf" }, itemStyle: { color: "#2dd4bf" }, areaStyle: { color: "rgba(45,212,191,0.1)" } },
+        { value: [45, 0.5, 2.1, 0.6, 180], name: "黄海", lineStyle: { color: "#6b8afc" }, itemStyle: { color: "#6b8afc" }, areaStyle: { color: "rgba(107,138,252,0.1)" } },
       ],
     }],
   };
@@ -68,7 +68,7 @@ function EcologyPage() {
     xAxis: { ...baseChartOption.xAxis, type: "category", data: ["2019", "2020", "2021", "2022", "2023", "2024", "2025"] },
     yAxis: { ...baseChartOption.yAxis, type: "value" },
     series: [
-      { name: "鱼类", type: "bar", data: [320, 290, 310, 340, 360, 380, 395], itemStyle: { color: { type: "linear", x: 0, y: 0, x2: 0, y2: 1, colorStops: [{ offset: 0, color: "#22d3ee" }, { offset: 1, color: "#0891b2" }] }, borderRadius: [4, 4, 0, 0] } },
+      { name: "鱼类", type: "bar", data: [320, 290, 310, 340, 360, 380, 395], itemStyle: { color: { type: "linear", x: 0, y: 0, x2: 0, y2: 1, colorStops: [{ offset: 0, color: "#4f6bf6" }, { offset: 1, color: "#2d4fd4" }] }, borderRadius: [4, 4, 0, 0] } },
       { name: "甲壳类", type: "bar", data: [180, 160, 175, 190, 200, 215, 225], itemStyle: { color: { type: "linear", x: 0, y: 0, x2: 0, y2: 1, colorStops: [{ offset: 0, color: "#a78bfa" }, { offset: 1, color: "#7c3aed" }] }, borderRadius: [4, 4, 0, 0] } },
       { name: "珊瑚覆盖率", type: "line", smooth: true, yAxisIndex: 0, data: [45, 42, 40, 43, 46, 48, 50], lineStyle: { color: "#f472b6", width: 3 }, itemStyle: { color: "#f472b6" }, symbol: "circle", symbolSize: 8 },
     ],
