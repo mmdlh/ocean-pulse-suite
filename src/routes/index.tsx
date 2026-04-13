@@ -4,7 +4,7 @@ import { GlassCard } from "@/components/GlassCard";
 import { StatCard } from "@/components/StatCard";
 import { StatusIndicator } from "@/components/StatusIndicator";
 import { Thermometer, Droplets, Wind, Gauge, Activity, Anchor } from "lucide-react";
-import ReactEChartsCore from "echarts-for-react/lib/core";
+import { ClientECharts } from "@/components/ClientECharts";
 import * as echarts from "echarts/core";
 import { LineChart, BarChart, PieChart, RadarChart } from "echarts/charts";
 import { GridComponent, TooltipComponent, LegendComponent, RadarComponent } from "echarts/components";
