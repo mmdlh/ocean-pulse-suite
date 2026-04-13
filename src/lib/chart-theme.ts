@@ -7,7 +7,7 @@ export const baseChartOption = {
   backgroundColor: "transparent",
   textStyle: { color: "#94a3b8", fontFamily: "Inter, sans-serif" },
   legend: { textStyle: { color: "#94a3b8" } },
-  grid: { left: "3%", right: "4%", bottom: "3%", containLabel: true },
+  grid: { left: "3%", right: "4%", bottom: "12%", containLabel: true },
   tooltip: {
     backgroundColor: "rgba(15, 23, 42, 0.9)",
     borderColor: "rgba(34, 211, 238, 0.3)",
