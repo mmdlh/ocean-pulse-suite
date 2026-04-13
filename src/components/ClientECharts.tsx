@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 type ClientEChartsProps = {
   echarts: any;
@@ -6,18 +6,46 @@ type ClientEChartsProps = {
   style?: React.CSSProperties;
 };
 
-export function ClientECharts(props: ClientEChartsProps) {
-  const [Component, setComponent] = useState<React.ComponentType<any> | null>(null);
+export function ClientECharts({ echarts, option, style }: ClientEChartsProps) {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const chartRef = useRef<any>(null);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    import("echarts-for-react/lib/core").then((mod) => {
-      setComponent(() => mod.default || mod);
-    });
+    setMounted(true);
   }, []);
 
-  if (!Component) {
-    return <div style={props.style} />;
-  }
+  useEffect(() => {
+    if (!mounted || !containerRef.current) return;
 
-  return <Component {...props} />;
+    let EChartsComponent: any;
+    import("echarts-for-react/lib/core").then((mod) => {
+      EChartsComponent = mod.default || mod;
+      // Force re-render by updating state isn't ideal, so we use direct DOM
+      // Instead, let's use echarts directly
+      if (!containerRef.current) return;
+      const chart = echarts.init(containerRef.current);
+      chart.setOption(option);
+      chartRef.current = chart;
+
+      const resizeObserver = new ResizeObserver(() => {
+        chart.resize();
+      });
+      resizeObserver.observe(containerRef.current);
+
+      return () => {
+        resizeObserver.disconnect();
+        chart.dispose();
+      };
+    });
+
+    return () => {
+      if (chartRef.current) {
+        chartRef.current.dispose();
+        chartRef.current = null;
+      }
+    };
+  }, [mounted, echarts, option]);
+
+  return <div ref={containerRef} style={style} />;
 }
